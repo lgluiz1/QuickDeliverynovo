@@ -1,0 +1,152 @@
+{% block cotacao %}
+{% load static %}
+{% csrf_token %}
+
+<div class="modal-cotacao">
+
+    <div class="modal-cotacao-content">
+        <div class="modal-cotacao-content-header">
+            <span class="material-symbols-outlined">
+                handshake
+                </span> <h1>Solicitação de Cotação</h1>
+                <div class="modal-cotacao-close"><span class="material-symbols-outlined">
+                    close
+                    </span></div>
+        </div>
+        <div class="modal-cotacao-content-body">
+            <div class="modal-cotacao-content-body-text">
+                <p>Para solicitar uma cotação, preencha os dados abaixo:</p>
+            </div>
+            <div class="modal-cotacao-content-body-form">
+                <div class="modal-cotacao-body">
+                    <form method="POST">
+                        {% csrf_token %}
+                        <div class="modal-cotacao-dados-pessoais">
+                        <div class="form-group">
+                            {{ form.nome.label_tag }}
+                            {{ form.nome }}
+                        </div>
+                    </div>
+                    <div class="modal-cotacao-dados-infor"></div>
+                        <div class="form-group">
+                            {{ form.empresa.label_tag }}
+                            {{ form.empresa }}
+                        </div>
+                    
+                        <div class="form-group">
+                            {{ form.celular.label_tag }}
+                            {{ form.celular }}
+                        </div>
+                    
+                        <div class="form-group">
+                            {{ form.telefone.label_tag }}
+                            {{ form.telefone }}
+                        </div>
+                    
+                        <div class="form-group">
+                            {{ form.email.label_tag }}
+                            {{ form.email }}
+                        </div>
+                    </div>
+                    <div class="modal-cotacao-dados-service">
+                        <div class="form-group">
+                            {{ form.cnpj_remetente.label_tag }}
+                            {{ form.cnpj_remetente }}
+                        </div>
+                    
+                        <div class="form-group">
+                            {{ form.uf_remetente.label_tag }}
+                            {{ form.uf_remetente }}
+                        </div>
+                    
+                        <div class="form-group">
+                            {{ form.cidade_remetente.label_tag }}
+                            {{ form.cidade_remetente }}
+                        </div>
+                    
+                        <div class="form-group">
+                            {{ form.cnpj_destinatario.label_tag }}
+                            {{ form.cnpj_destinatario }}
+                        </div>
+                    
+                        <div class="form-group">
+                            {{ form.uf_destinatario.label_tag }}
+                            {{ form.uf_destinatario }}
+                        </div>
+                    
+                        <div class="form-group">
+                            {{ form.cidade_destinatario.label_tag }}
+                            {{ form.cidade_destinatario }}
+                        </div>
+                    </div>
+                        <div class="form-group">
+                            {{ form.tomador_servico.label_tag }}
+                            {{ form.tomador_servico }}
+                        </div>
+                        <div class="modal-cotacao-dados-carga">
+                        <div class="form-group">
+                            {{ form.tipo_carga.label_tag }}
+                            {{ form.tipo_carga }}
+                        </div>
+                    
+                        <div class="form-group">
+                            {{ form.tipo_embalagem.label_tag }}
+                            {{ form.tipo_embalagem }}
+                        </div>
+                    
+                    
+                        <div class="form-group">
+                            {{ form.valor_mercadoria.label_tag }}
+                            {{ form.valor_mercadoria }}
+                        </div>
+                    </div>
+                    <div class="cotacao-medidas">
+                        <h4>Medidas</h4>
+    <div id="formset-wrapper">
+        {{ formset.management_form }}
+        {% for form in formset %}
+            <div class="formset-item">
+                {{ form.comprimento.label_tag }} {{ form.comprimento }}
+                {{ form.largura.label_tag }} {{ form.largura }}
+                {{ form.altura.label_tag }} {{ form.altura }}
+                {{ form.peso.label_tag }} {{ form.peso }}
+                <button type="button" class="remove-medida"><span class="material-symbols-outlined">
+                    delete
+                    </span></button>
+                
+            </div>
+        {% endfor %}
+        
+    
+    </div>
+    <button type="button" id="add-medida"><span class="material-symbols-outlined">
+        add_circle
+        </span> Adicionar Medida </button>
+    </div>
+                        <div class="form-group">
+                            {{ form.veiculo_especial.label_tag }}
+                            {{ form.veiculo_especial }}
+                        </div>
+                    
+                        <button type="submit" class="btn btn-primary">Enviar Cotação <span class="material-symbols-outlined">
+                            send
+                            </span></button>
+                    </form>
+                    
+                    {% if success %}
+                        <p class="alert alert-success">Cotação enviada com sucesso!</p>
+                    {% endif %}
+                    
+                    {% if error %}
+                        <p class="alert alert-danger">{{ error }}</p>
+                    {% endif %}                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+{% endblock %}

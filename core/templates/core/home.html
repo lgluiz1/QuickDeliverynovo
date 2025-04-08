@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static '/css/home.css' %}">
+<link rel="stylesheet" href="{% static '/css/botaocotacao.css' %}">
+<link rel="stylesheet" href="{% static '/css/sevicos.css' %}">
+{% endblock %}
+
+{% block title %}Quick Delivery{% endblock %}
+
+{% block content %}
+<main>
+    <div class="banner">
+        <!-- carrega video la do db -->
+        
+        <video src="{{ config.video_principal.url }}" type="video/mp4" autoplay muted loop></video>
+        <div class="overlay"></div> <!-- Camada escura -->
+        <div class="banner-content">
+            <h1>Entrega Rápida e Segura</h1>
+            <p>Serviço de transporte eficiente para suas encomendas.</p>
+            <div class="button-cotacao">
+                <a class="anchor cotacao-botao ">
+                  <span>Solicitar Cotação</span>
+                </a>
+              </div>
+              
+        </div>
+        
+    </div>
+    <div class="sobre-banner">
+        <div class="sobre-banner-content">
+            <p>Desde 2004, inovamos na logística com tecnologia e automação, <br> garantindo entregas rápidas, seguras e conectadas em tempo real.</p>
+    </div>
+    </div>
+    <div class="sobre-a-empresa">
+        <div class="sobre-a-img">
+            <img src="{{ config.imagens.url }}" alt="Imagem do sobre da empresa ">               
+        </div>
+        <div class="sobre-a-texto" id="sobre-a-texto">
+            <div class="sobre-content-texto">
+            <h1>Sobre a Empresa</h1>
+            <div class="linha"></div>
+            <p>Quick Delivery Fundada em 2004, a Quick Delivery iniciou suas atividades no setor de transporte de pequenas encomendas, com a criação de uma estrutura operacional em âmbito nacional, de qualidade, focada no atendimento emergencial, foi o fator que a diferenciou dos concorrentes.</p>
+        </div>  
+        <div class="sobre-video">
+            <a href="{{ yt.url_video }}" target="_blank">Conhecer sobre a empresa <span class="material-symbols-outlined">
+                play_circle
+                </span></a>
+        </div>
+        </div>
+    </div>
+    
+    <div class="servicos">
+        <div class="tempo-de-empresa">
+            <h1>A mais de</h1>
+            <div class="linha-1"></div>
+            <p class="contador anos" data-valor="20">+0</p> <!-- Agora exibe "20 Anos" -->
+        </div>
+        <div class="servicos-content">
+            <h1>Volumes entregues</h1>
+            <div class="linha-1"></div>
+            <p class="contador" data-valor="100000000">+0</p> <!-- Exibirá 100M -->
+        </div>
+        <div class="servicos-content">
+            <h1>Coletas realizadas</h1>
+            <div class="linha-1"></div>
+            <p class="contador" data-valor="300000000">+0</p> <!-- Exibirá 300M -->
+        </div>
+    </div>
+
+    <div class="locais"> 
+        <!-- Texto acima do vídeo -->
+        <div class="text-overlay">
+            
+            <img src="{{ config.imagen_png.url }}" alt="Imagem do sobre da empresa "> 
+            <div class="text-overlay-body">
+            <video src="{{ config.video_viagens.url }}" type="video/mp4" autoplay muted loop></video>
+            <div class="overlay-camada"></div>
+            <div class="text-overley-title">
+                <h1>Aqui</h1>
+                <h2>A Entrega</h2>
+                <h3>é certa!</h3>
+                <div class="barra-left"></div>
+            </div>
+            
+            
+        </div>
+    </div>
+        <!-- Contêiner do vídeo com efeito paralaxe -->
+       
+    </div>
+        
+
+    {% block script %}
+    <script src="{% static '/js/servicos.js' %}"></script>
+    {% endblock %}
+
+
+</main>
+{% endblock %}

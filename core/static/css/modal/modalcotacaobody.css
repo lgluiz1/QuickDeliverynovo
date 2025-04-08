@@ -1,0 +1,38 @@
+.modal-cotacao-content-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(143, 143, 143);
+}
+.modal-cotacao-body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-cotacao-body form{
+display: flex;
+align-items: center;
+justify-content: center;
+gap:10px;
+}
+.modal-cotacao-content-body-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.modal-cotacao-content-body-form{
+    padding: 20px;
+}
+
+.modal-cotacao-dados-carga{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal-cotacao-dados-service{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

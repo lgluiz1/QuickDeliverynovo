@@ -1,0 +1,86 @@
+{% block header %}
+<header>
+    <nav>
+    <div class="logo">
+        {% if config.logo %}
+            <img src="{{ config.logo.url }}" alt="Logo do Site">
+        {% endif %}
+    </div>
+    <div class="menu">
+        <ul>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#sobre-a-texto">Nossa Empresa</a></li>
+            <li><a href="#">Unidades</a></li>
+            <li><a href="#">Certificados</a></li>
+            <li><a href="#">Cod. Ética</a></li>
+            <li><a href="#">Contato</a></li>
+
+        </ul>
+    </div>
+    <div class="cliente cotacao-botao">
+        <a href="#"><span class="material-symbols-outlined">
+            handshake
+            </span> Faça a sua Cotação</a>
+
+    </div>
+        <!-- Ícone hamburger -->
+<div class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</nav>
+
+<!-- Menu oculto (hamburger) -->
+<div class="menu-mobile">
+    
+  <ul>
+    
+    <li><a href="#">Serviços</a></li>
+    <li><a href=".sobre-a-texto">Nossa Empresa</a></li>
+    <li><a href="#">Unidades</a></li>
+    <li><a href="#">Certificados</a></li>
+    <li><a href="#">Cod. Ética</a></li>
+    <li><a href="#">Contato</a></li>
+    <div class="cotacao-mobile cotacao-botao ">
+        <a href="#"><span class="material-symbols-outlined">
+            calculate
+            </span> Faça a sua Cotação</a>
+    </div>
+    
+  </ul>
+  
+</div>
+    </nav>
+    <div class="rastreamento-menu">
+        
+        <form action="#">
+            <h1>Rastreie a sua carga <span class="material-symbols-outlined">
+                share_location
+                </span></h1>
+            
+            <div class="input-group">
+            <h1>CPF/CNPJ</h1>
+            <input type="text" placeholder="CPF/CNPJ:">
+            </div>
+            <div class="input-group">
+                <h1>Tipo:</h1>
+                <select name="tipo" tabindex="2" class="large gfield_select">
+                    <option value="SELECIONE" ></option>
+                    <option value="REMETENTE">REMETENTE</option>
+                    <option value="DESTINATARIO">DESTINATÁRIO</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <h1>Nº DOC:</h1>
+                <input type="text" placeholder="NF-e">
+            </div>
+
+           
+            <button type="submit"><span class="material-symbols-outlined">
+                local_shipping
+                </span></button>
+        </form>
+    </div>
+</header>
+{% endblock header %}

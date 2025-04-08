@@ -1,0 +1,40 @@
+.modal-cotacao {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8); /* Começa menor */
+    min-width: 300px;
+    max-height: 80%;
+    background-color: rgba(243, 239, 239, 0.995);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999999;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal-cotacao.ativo {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1); /* Aparece suavemente */
+}
+
+
+.modal-cotacao-close{
+    right: 10px;
+    top: 10px;
+    position: absolute;
+    cursor: pointer;
+    font-size: 30px;
+    
+}
+.modal-cotacao-close span{
+    color: rgb(252, 5, 5);
+}
+.modal-cotacao-close span:hover{
+    color: rgb(6, 6, 6);
+}

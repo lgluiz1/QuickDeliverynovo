@@ -1,0 +1,217 @@
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    color: rgb(143, 143, 143);
+    border-top: 1px solid rgba(143, 143, 143, 0.336);
+    padding: 20px;
+    flex-grow: 1;
+    
+}
+
+.rodapeinformacoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.rodapeinformacoes1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    position: relative;
+    width: 300px;
+}
+
+.mascote {
+    width: 200px;
+    position: absolute;
+    z-index: 23;
+}
+
+.rodapeinformacoes2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+    width: 50%;
+    min-width: 300px;
+}
+
+.rodapeinformacoes2 .assistencia ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.rodapeinformacoes2 .assistencia h1 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.rodapeinformacoes2 .assistencia ul li {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.rodapeinformacoes2 .assistencia ul li a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    color: rgb(143, 143, 143);
+    transition: color 0.2s ease;
+}
+
+.rodapeinformacoes2 .assistencia ul li a:hover {
+    color: #ff0000;
+}
+
+.rodapeinformacoes3 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rodapeinformacoes3 h1 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    display: flex;
+    gap: 5px;
+}
+
+.rodapeinformacoes3 ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.rodapeinformacoes3 ul li {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.rodapeinformacoes3 ul li a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    color: rgb(143, 143, 143);
+}
+
+.rodapeinformacoes3 ul li a:hover {
+    color: #ff0000;
+}
+
+.rodape {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    color: rgb(143, 143, 143);
+    border-top: 1px solid rgba(143, 143, 143, 0.336);
+    padding: 10px;
+    font-size: 15px;
+    font-family: "Space Grotesk", sans-serif;
+    text-align: center;
+    z-index: 1;
+}
+
+.rodape p {
+    margin: 0;
+    font-size: 15px;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+
+
+/* From Uiverse.io by Lokesh1379 */ 
+.social{
+    margin-bottom: 30px;
+}
+.parent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .child {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease-in-out;
+    border-radius: 50%;
+    margin: 0 5px;
+  }
+  
+  .child:hover {
+    background-color: white;
+    background-position: -100px 100px, -100px 100px;
+    transform: rotate3d(0.5, 1, 0, 30deg);
+    transform: perspective(180px) rotateX(60deg) translateY(2px);
+    box-shadow: 0px 10px 10px rgb(182, 1, 1);
+  }
+  
+  button {
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+  }
+  
+  .button:hover {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate3d(0px, 0px, 15px) perspective(180px) rotateX(-35deg) translateY(2px);
+    border-radius: 50%;
+  }
+
+
+@media (max-width: 1280px) { 
+
+        
+}
+    
+@media (max-width: 768px) { 
+    .rodapeinformacoes{
+        flex-direction: column;
+    }
+    .rodapeinformacoes1 img{
+        width: 200px;
+    }
+    .rodapeinformacoes1, .rodapeinformacoes2, .rodapeinformacoes3{
+        width: 300px;
+    }
+  .assistencia{
+    width: 300px;
+  }
+
+}
+@media (max-width: 480px) { 
+    
+
+        
+}
