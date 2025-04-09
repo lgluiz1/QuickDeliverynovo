@@ -3,17 +3,19 @@
     <nav>
     <div class="logo">
         {% if config.logo %}
-            <img src="{{ config.logo.url }}" alt="Logo do Site">
+        <a href="{% url 'home' %}">
+            <img src="{{ config.logo.url }}" alt="Logo do Site"> 
+        </a>
         {% endif %}
     </div>
     <div class="menu">
         <ul>
-            <li><a href="#">Serviços</a></li>
-            <li><a href="#sobre-a-texto">Nossa Empresa</a></li>
-            <li><a href="#">Unidades</a></li>
-            <li><a href="#">Certificados</a></li>
-            <li><a href="#">Cod. Ética</a></li>
-            <li><a href="#">Contato</a></li>
+            <li><a href="{% url 'servicos' %}">Serviços</a></li>
+            <li><a href="{% url 'empresa' %}">Nossa Empresa</a></li>
+            <li><a href="{% url 'unidades' %}">Unidades</a></li>
+            <li><a href="{% url 'certificados' %}">Certificados</a></li>
+            <li><a href="{% url 'cod_etica' %}">Cod. Ética</a></li>
+            <li><a href="{% url 'contato' %}">Contato</a></li>
 
         </ul>
     </div>

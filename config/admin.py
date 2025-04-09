@@ -1,9 +1,10 @@
 from django.contrib import admin
-from .models import SiteConfig , Telefone , RedesSociais , Email, VideoSobre
+from .models import SiteConfig , Telefone , RedesSociais , Email, VideoSobre, CodEtica
 
 # Register your models here.
 admin.site.register(SiteConfig)
 admin.site.register(VideoSobre)
+admin.site.register(CodEtica)
 
 class TelefoneInline(admin.TabularInline):  # ou admin.StackedInline se preferir
     model = Telefone

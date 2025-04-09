@@ -5,7 +5,8 @@
     <div class="rodapeinformacoes">
         <div class="rodapeinformacoes1">
             {% if config.logo %}
-            <img src="{{ config.logo.url }}" alt="Logo do Site">
+            <a href="{% url 'home' %}"></a>
+            <img src="{{ config.logo.url }}" alt="Logo do Site"></a>
         {% endif %}
             
             
@@ -16,7 +17,7 @@
                 <h1><span class="material-symbols-outlined">
                     enterprise
                     </span> Empresa</h1>
-                <li><a href="#"><span class="material-symbols-outlined">
+                <li><a href="{% url 'empresa' %}"><span class="material-symbols-outlined">
                     local_shipping
                     </span>Sobre nós</a></li>
                 <li><a href="#"><span class="material-symbols-outlined">
@@ -38,7 +39,7 @@
                     <li><a href="#"><span class="material-symbols-outlined">
                         share_location
                         </span>Rastreamento</a></li>
-                    <li><a href="#"><span class="material-symbols-outlined">
+                    <li><a href="#" class="cotacao-botao"><span class="material-symbols-outlined">
                         handshake
                         </span>Cotação</a></li>
                 </ul>

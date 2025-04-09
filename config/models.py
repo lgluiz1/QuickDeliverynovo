@@ -43,3 +43,10 @@ class VideoSobre(models.Model):
 
     def __str__(self):
         return self.url_video
+
+class CodEtica(models.Model):
+    # carregar PDF
+    pdf = models.FileField(upload_to='cod_etica/', blank=True, null=True)
+
+    def __str__(self):
+        return "Cod Etica"
